@@ -3,6 +3,8 @@ name = "concrete-token-demo"
 version = "0.1.0"
 edition = "2021"
 description = "Concrete Token JEPA demo using local Liquid AI models"
+license = "Apache-2.0"
+repository = "https://github.com/SuperInstance/concrete-token-demo"
 
 [dependencies]
 reqwest = { version = "0.12", features = ["blocking", "json"] }

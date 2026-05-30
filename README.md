@@ -43,7 +43,30 @@ Sensor Reading
 
 ## Run tests
 
-```bash
-cargo test
-cargo clippy
 ```
+
+## Ecosystem
+
+concrete-token-demo is the **CLI front door** to the PLATO Nervous System.
+
+**Where this sits:** Demonstrates Layers 1 (nano 350M) through 3 (fleet 1.2B) with live ollama calls. The Rust-native counterpart to [plato-browser](https://github.com/SuperInstance/plato-browser).
+
+**How to connect it:**
+```bash
+# Requires ollama running locally with a model pulled
+ollama pull phi4-mini
+# Then run the demo
+cargo run
+```
+
+| Repo | Role |
+|------|------|
+| [plato-nervous](https://github.com/SuperInstance/plato-nervous) | Core engine this demo drives |
+| [plato-vision-jepa](https://github.com/SuperInstance/plato-vision-jepa) | Vision state vectors (can be simulated) |
+| [plato-audio-jepa](https://github.com/SuperInstance/plato-audio-jepa) | Audio state vectors (can be simulated) |
+| [plato-browser](https://github.com/SuperInstance/plato-browser) | Browser-native sister demo (zero-install) |
+| [luciddreamer-ai](https://github.com/SuperInstance/luciddreamer-ai) | Cloud-layer reactive podcast engine |
+| [openconstruct-kernel](https://github.com/SuperInstance/openconstruct-kernel) | Hardware layer feeding sensor data |
+| [hermit-crab](https://github.com/SuperInstance/hermit-crab) | Agent migration with CR tracking |
+
+See [DEPENDENCIES.md](./DEPENDENCIES.md) for detailed dependency and data flow information.
